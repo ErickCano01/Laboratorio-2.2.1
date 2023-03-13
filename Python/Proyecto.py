@@ -31,11 +31,11 @@ class Proyecto:
     def __str__(self):
         sb = []
         sb.append("Proyecto{")
-        sb.append("nombre=").append(self.nombre)
-        sb.append(", fechaInicio=").append(self.fechaInicio)
-        sb.append(", estado=").append(self.estado)
-        sb.append(", equipos=").append(self.equipos)
-        sb.append(", stakeholders=").append(self.stakeholders)
-        sb.append(", tareas=").append(self.tareas)
+        sb.append("nombre=" + self.nombre)
+        sb.append(", fechaInicio=" + self.fechaInicio)
+        sb.append(", estado=" + str(self.estado))
+        sb.append(", equipos=" + str(self.equipos))
+        sb.append(", stakeholders=" + str(self.stakeholders))
+        sb.append(", tareas=" + str(self.tareas))
         sb.append('}')
         return ''.join(sb)

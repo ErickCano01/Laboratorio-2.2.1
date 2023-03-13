@@ -1,8 +1,8 @@
-from proyecto import Proyecto
-from stakeholder import Stakeholder
-from scrum_master import ScrumMaster
-from equipo import Equipo
-from integrante import Integrante
+from Proyecto import Proyecto
+from Stakeholder import Stakeholder
+from ScrumMaster import ScrumMaster
+from Equipo import Equipo
+from Integrante import Integrante
 
 proyecto = Proyecto("Proyecto 1", "20-19-2023", True)
 

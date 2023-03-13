@@ -25,14 +25,11 @@ class Equipo:
     def addIntegrante(self, aIntegrante):
         self.integrantes.append(aIntegrante)
 
-    def __str__(self):
-        return ""
-
     def getScrumMaster(self):
         return self.scrumMaster
 
     def setScrumMaster(self, aScrumMaster):
         self.scrumMaster = aScrumMaster
 
-	def __str__(self):
-    	return f"Equipo{{nombre={self.nombre}, id={self.id}, scrumMaster={self.scrumMaster}, integrantes={self.integrantes}}}"
+    def __str__(self):
+        return f"Equipo{{nombre={self.nombre}, id={self.id}, scrumMaster={self.scrumMaster}, integrantes={self.integrantes}}}"
