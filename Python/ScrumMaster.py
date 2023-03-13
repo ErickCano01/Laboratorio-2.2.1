@@ -3,25 +3,23 @@
 import Equipo
 from typing import List
 
-class ScrumMaster(object):
-	def getNombre(self) -> String:
-		return self.__nombre
+class ScrumMaster:
 
-	def setNombre(self, aNombre : String) -> None:
-		self.__nombre = aNombre
+    def __init__(self, nombre):
+        self.nombre = nombre
+        self.rolSecundario = ""
 
-	def getRolSecundario(self) -> String:
-		return self.__rolSecundario
+    def getNombre(self):
+        return self.nombre
 
-	def setRolSecundario(self, aRolSecundario : String) -> None:
-		self.__rolSecundario = aRolSecundario
+    def setNombre(self, aNombre):
+        self.nombre = aNombre
 
-	def ScrumMaster(self, aNombre : String, aRolSecundario : String):
-		pass
+    def getRolSecundario(self):
+        return self.rolSecundario
 
-	def __init__(self):
-		self.__nombre : String = None
-		self.__rolSecundario : String = None
-		self.hasA : Equipo = None
-		"""# @AssociationMultiplicity 1"""
+    def setRolSecundario(self, aRolSecundario):
+        self.rolSecundario = aRolSecundario
 
+    def __str__(self):
+        return f"ScrumMaster{{nombre={self.nombre}, rolSecundario={self.rolSecundario}}}"

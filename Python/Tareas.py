@@ -3,29 +3,32 @@
 import Integrante
 from typing import List
 
-class Tareas(object):
-	def getContexto(self):
-		pass
+def __init__(self, id, prioridad, contexto, encargado):
+    self.id = id
+    self.prioridad = prioridad
+    self.contexto = contexto
+    self.encargado = encargado
 
-	def setContexto(self, aContexto) -> None:
-		pass
+def get_contexto(self):
+    raise NotImplementedError()
 
-	def getId(self) -> int:
-		return self.__id
+def set_contexto(self, contexto):
+    raise NotImplementedError()
 
-	def setId(self, aId : int) -> None:
-		self.__id = aId
+def get_id(self):
+    return self.id
 
-	def getPrioridad(self) -> int:
-		return self.__prioridad
+def set_id(self, id):
+    self.id = id
 
-	def setPrioridad(self, aPrioridad : int) -> None:
-		self.__prioridad = aPrioridad
+def get_prioridad(self):
+    return self.prioridad
 
-	def __init__(self):
-		self.__id : int = None
-		self.__prioridad : int = None
-		self.__contexto : String = None
-		self.encargado : Integrante = None
-		"""# @AssociationMultiplicity 1"""
+def set_prioridad(self, prioridad):
+    self.prioridad = prioridad
 
+def set_contexto(self, contexto):
+    self.contexto = contexto
+
+def __str__(self):
+    return f"Tareas{{id={self.id}, prioridad={self.prioridad}, contexto={self.contexto}, encargado={self.encargado}}}"

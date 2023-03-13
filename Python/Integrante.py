@@ -1,33 +1,24 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 import Equipo
-from typing import List
 
-class Integrante(object):
-	def getNombre(self) -> String:
-		return self.__nombre
+class Integrante:
+    def __init__(self, nombre, rol):
+        self.nombre = nombre
+        self.rol = rol
+        self.tareas = []
 
-	def setNombre(self, aNombre : String) -> None:
-		self.__nombre = aNombre
+    def getNombre(self):
+        return self.nombre
 
-	def getRol(self) -> String:
-		return self.__rol
+    def setNombre(self, aNombre):
+        self.nombre = aNombre
 
-	def setRol(self, aRol : String) -> None:
-		self.__rol = aRol
+    def getRol(self):
+        return self.rol
 
-	def toString(self):
-		pass
+    def setRol(self, aRol):
+        self.rol = aRol
 
-	def Integrante(self, aNombre : String, aRol : String):
-		pass
-
-	def __init__(self):
-		self.__nombre : String = None
-		self.__rol : String = None
-		self.equipo : Equipo = None
-		"""# @AssociationMultiplicity 1"""
-		self.tareas = []
-		"""# @AssociationMultiplicity *
-		# @AssociationKind Aggregation"""
-
+    def __str__(self):
+        return "Integrante{nombre=" + self.nombre + ", rol=" + self.rol + ", tareas=" + str(self.tareas) + "}"

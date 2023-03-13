@@ -2,41 +2,37 @@
 # -*- coding: UTF-8 -*-
 import ScrumMaster
 import Integrante
-from typing import List
 
-class Equipo(object):
-	def getNombre(self) -> String:
-		return self.__nombre
+class Equipo:
+    def __init__(self, aId, aNombre, aSm):
+        self.nombre = aNombre
+        self.id = aId
+        self.scrumMaster = aSm
+        self.integrantes = []
 
-	def setNombre(self, aNombre : String) -> None:
-		self.__nombre = aNombre
+    def getNombre(self):
+        return self.nombre
 
-	def getId(self) -> int:
-		return self.__id
+    def setNombre(self, aNombre):
+        self.nombre = aNombre
 
-	def setId(self, aId : int) -> None:
-		self.__id = aId
+    def getId(self):
+        return self.id
 
-	def addIntegrate(self, aIntegrante : Integrante):
-		pass
+    def setId(self, aId):
+        self.id = aId
 
-	def toString(self):
-		pass
+    def addIntegrante(self, aIntegrante):
+        self.integrantes.append(aIntegrante)
 
-	def getScrumMaster(self) -> ScrumMaster:
-		return self.scrumMaster
+    def __str__(self):
+        return ""
 
-	def setScrumMaster(self, aScrumMaster : ScrumMaster) -> None:
-		self.scrumMaster = aScrumMaster
+    def getScrumMaster(self):
+        return self.scrumMaster
 
-	def Equipo(self, aId : int, aNombre : String, aSm : ScrumMaster):
-		pass
+    def setScrumMaster(self, aScrumMaster):
+        self.scrumMaster = aScrumMaster
 
-	def __init__(self):
-		self.__nombre : String = None
-		self.__id : int = None
-		self.__scrumMaster : ScrumMaster = None
-		self.integrantes = []
-		"""# @AssociationMultiplicity *
-		# @AssociationKind Aggregation"""
-
+	def __str__(self):
+    	return f"Equipo{{nombre={self.nombre}, id={self.id}, scrumMaster={self.scrumMaster}, integrantes={self.integrantes}}}"

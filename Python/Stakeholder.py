@@ -2,27 +2,30 @@
 # -*- coding: UTF-8 -*-
 from typing import List
 
-class Stakeholder(object):
-	def getPresupuesto(self) -> float:
-		return self.__presupuesto
+class Stakeholder:
 
-	def setPresupuesto(self, aPresupuesto : float) -> None:
-		self.__presupuesto = aPresupuesto
+    def __init__(self, presupuesto, nombre, id):
+        self.presupuesto = presupuesto
+        self.nombre = nombre
+        self.id = id
 
-	def getNombre(self) -> String:
-		return self.__nombre
+    def get_presupuesto(self):
+        return self.presupuesto
 
-	def setNombre(self, aNombre : String) -> None:
-		self.__nombre = aNombre
+    def set_presupuesto(self, presupuesto):
+        self.presupuesto = presupuesto
 
-	def getId(self) -> int:
-		return self.__id
+    def get_nombre(self):
+        return self.nombre
 
-	def setId(self, aId : int) -> None:
-		self.__id = aId
+    def set_nombre(self, nombre):
+        self.nombre = nombre
 
-	def __init__(self):
-		self.__presupuesto : float = None
-		self.__nombre : String = None
-		self.__id : int = None
+    def get_id(self):
+        return self.id
 
+    def set_id(self, id):
+        self.id = id
+
+    def __str__(self):
+        return f"Stakeholder{{presupuesto={self.presupuesto}, nombre={self.nombre}, id={self.id}}}"
