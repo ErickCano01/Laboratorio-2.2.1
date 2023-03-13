@@ -1,25 +1,39 @@
+package scrum;
+
 public class ScrumMaster {
-	private String nombre;
-	private String rolSecundario;
-	public Equipo hasA;
 
-	public String getNombre() {
-		return this.nombre;
-	}
+    private String nombre;
+    private String rolSecundario;
 
-	public void setNombre(String aNombre) {
-		this.nombre = aNombre;
-	}
+    public ScrumMaster(String nombre) {
+        this.nombre = nombre;
+        this.rolSecundario = "";
+    }
+    
+    public String getNombre() {
+        return this.nombre;
+    }
 
-	public String getRolSecundario() {
-		return this.rolSecundario;
-	}
+    public void setNombre(String aNombre) {
+        this.nombre = aNombre;
+    }
 
-	public void setRolSecundario(String aRolSecundario) {
-		this.rolSecundario = aRolSecundario;
-	}
+    public String getRolSecundario() {
+        return this.rolSecundario;
+    }
 
-	public ScrumMaster(String aNombre, String aRolSecundario) {
-		throw new UnsupportedOperationException();
-	}
+    public void setRolSecundario(String aRolSecundario) {
+        this.rolSecundario = aRolSecundario;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("ScrumMaster{");
+        sb.append("nombre=").append(nombre);
+        sb.append(", rolSecundario=").append(rolSecundario);
+        sb.append('}');
+        return sb.toString();
+    }
+
 }
