@@ -1,32 +1,43 @@
+package scrum;
+
 import java.util.Vector;
 
 public class Integrante {
-	private String nombre;
-	private String rol;
-	public Equipo has;
-	public Vector<Tareas> tareas = new Vector<Tareas>();
 
-	public String getNombre() {
-		return this.nombre;
-	}
+    private String nombre;
+    private String rol;
+    public Vector<Tareas> tareas = new Vector<Tareas>();
 
-	public void setNombre(String aNombre) {
-		this.nombre = aNombre;
-	}
+    public Integrante(String nombre, String rol) {
+        this.nombre = nombre;
+        this.rol = rol;
+    }
+    
+    public String getNombre() {
+        return this.nombre;
+    }
 
-	public String getRol() {
-		return this.rol;
-	}
+    public void setNombre(String aNombre) {
+        this.nombre = aNombre;
+    }
 
-	public void setRol(String aRol) {
-		this.rol = aRol;
-	}
+    public String getRol() {
+        return this.rol;
+    }
 
-	public void toString() {
-		throw new UnsupportedOperationException();
-	}
+    public void setRol(String aRol) {
+        this.rol = aRol;
+    }
 
-	public Integrante(String aNombre, String aRol) {
-		throw new UnsupportedOperationException();
-	}
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Integrante{");
+        sb.append("nombre=").append(nombre);
+        sb.append(", rol=").append(rol);
+        sb.append(", tareas=").append(tareas);
+        sb.append('}');
+        return sb.toString();
+    }
+
 }
